@@ -1,0 +1,17 @@
+value.replace("[","")
+
+value.replace("]","")
+
+value.replace("{","")
+
+value.replace("}","")
+
+value.replace("\(","")
+
+value.replace("\)","")
+
+value.replace("\\","")
+
+value.replace("\"","")
+
+value.replace(";","")
