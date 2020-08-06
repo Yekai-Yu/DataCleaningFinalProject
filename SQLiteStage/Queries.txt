@@ -1,30 +1,95 @@
-1. 
-SELECT COUNT(DISTINCT(menuid)) FROM menu
+1.a
+IC:
+For each menu, there should be one unique menu id.
 
-2.
+Query: SELECT COUNT(DISTINCT(menuid)) FROM menu
+
+Result Example:
+(No record was selected)
+
+1.b
+IC:
+For each menu, there should be one unique menu id.
+
+Query:
 SELECT menu.* FROM menu
 JOIN
 (SELECT menuid as joinid, count(menuid) as cnt FROM menu GROUP BY joinid)
 ON menuid=joinid AND cnt>1
 
-3.
+Result Example:
+(No record was selected)
+
+2.a
+IC:
+For each menu, it should have a unique call_number as reference.
+
+Query:
 SELECT * FROM menu
 JOIN (SELECT call_number AS joinid, count(call_number) AS cnt FROM menu GROUP BY call_number)
-ON call_number=joinid AND cnt>1 AND call_number!=""
+ON call_number=joinid AND cnt>1
 
-4.
+Result Example:
+menuid	name	sponsor			event		venue		place				physical_description		occasion	notes										call_number	keywords	language	date			location	location_type	currency	currency_symbol	status	page_count	dish_count	joinid		cnt
+12477		Occidental & Oriental	Breakfast	Commercial	SS DORIC			BROADSIDE; ILLUS; 5.5X8.5;			HANDWRITTEN; STEAMSHIP COMPANY FLAG AT TOP OF MENU;				1900-2851					1900-04-18T00:00:00Z	Occidental & Oriental						complete	2	24		1900-2851	2
+12497		Cunard Line		Dinner		Commercial	EN ROUTE ABOARD R.M.S. LUCANIA	CARD; 4.25 X 6.5;				CUNARD LINE LOGO; PRICED WINE LIST ON BACK WITH PRICES IN BRITISH CURRENCY;	1900-2902					1900-04-21T00:00:00Z	Canadian Pacific Railway Company				complete	2	38		1900-2902	2
+12573		Maxwell House		Breakfast	Commercial	NASHVILLE, TN			CARD; ILLUS; 4.25X6.25;				ELABORATE PRINTING OF HOTEL NAME FORMS ILLUSTRATION;				1900-2404					1900-03-13T00:00:00Z	Maxwell House							complete	4	0		1900-2404	2
+
+2.b
+IC:
+For each menu, it should have a unique call_number as reference.
+
+Query:
 SELECT * FROM menu
-WHERE call_number=""
+WHERE call_number IS NULL
 
-5.
+Result Example:
+menuid	name	sponsor	event	venue	place	physical_description	occasion	notes	call_number	keywords	language	date	location	location_type	currency	currency_symbol	status	page_count	dish_count
+12478																		1900-04-18T00:00:00Z	Occidental & Oriental				complete	2	24
+12583																		1900-04-15T00:00:00Z	Hotel Eastman					complete	2	67
+12584																		1900-04-15T00:00:00Z	Republican House				complete	2	34
+
+3.
+IC:
+For each menu, it should have at least one dish on it and at least one page.
+
+Query:
 SELECT menuid,dish_count,page_count FROM menu
 WHERE dish_count<1 OR page_count<1
 
-6.
-SELECT menuid, date FROM menu
-WHERE (date<"1800-01-01" OR date>"2020-08-05") AND date!=""
+Result Example:
+menuid	dish_count	page_count
+12573	0		4
+17058	0		2
+19440	0		2
+23223	0		2
 
-7.
+4.
+IC:
+The menu date should be between 1850’s to 2000’s (limit extended to 1800-01-01 to 2020-08-05).
+
+Query:
+SELECT menuid, date FROM menu
+WHERE date<"1800-01-01" OR date>"2020-08-05"
+
+Restul Example:
+menuid	date
+13112	0190-03-05T00:00:00Z
+22951	1091-02-02T00:00:00Z
+32265	2928-03-26T00:00:00Z
+
+
+5
+IC:
+If a menu/event was held at the same location with another menu/event,  they should have the same place.
+
+Query:
 SELECT distinct A.menuid, A.location, A.place FROM menu A
 JOIN menu B
-ON A.menuid>B.menuid AND A.location=B.location AND A.place!=B.place AND A.location!="" AND B.location!="" AND A.place!="" AND B.place!=""
+ON A.menuid>B.menuid AND A.location=B.location AND A.place!=B.place
+
+Result Example:
+menuid	location			place
+12470	Norddeutscher Lloyd Bremen	SCHNELLDAMPFER KAISER WILHELM DER GROSSE
+12471	Norddeutscher Lloyd Bremen	DAMPFER KAISER WILHELM DER GROSSE
+12472	Norddeutscher Lloyd Bremen	DAMPFER KAISER WILHELM DER GROSSE
