@@ -1,0 +1,1119 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=TB
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=Linear_OR
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+"core/text-transform0#" [shape=record rankdir=LR label="{<f0> core/text-transform0# |<f1> Text transform on cells in column name using expression value.trim()}"];
+"core/text-transform1#" [shape=record rankdir=LR label="{<f0> core/text-transform1# |<f1> Text transform on cells in column name using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform2#" [shape=record rankdir=LR label="{<f0> core/text-transform2# |<f1> Text transform on cells in column name using expression value.trim()}"];
+"core/mass-edit0#" [shape=record rankdir=LR label="{<f0> core/mass-edit0# |<f1> Mass edit cells in column name}"];
+"core/mass-edit1#" [shape=record rankdir=LR label="{<f0> core/mass-edit1# |<f1> Mass edit cells in column name}"];
+"core/text-transform3#" [shape=record rankdir=LR label="{<f0> core/text-transform3# |<f1> Text transform on cells in column name using expression grel\:value.replace(\"é\", \"e\")}"];
+"core/text-transform4#" [shape=record rankdir=LR label="{<f0> core/text-transform4# |<f1> Text transform on cells in column name using expression grel\:value.replace(\"ü\", \"u\")}"];
+"core/text-transform5#" [shape=record rankdir=LR label="{<f0> core/text-transform5# |<f1> Text transform on cells in column name using expression grel\:value.replace(\"\\\"\", \"\")}"];
+"core/text-transform6#" [shape=record rankdir=LR label="{<f0> core/text-transform6# |<f1> Text transform on cells in column name using expression grel\:value.replace(\";\", \"\")}"];
+"core/text-transform7#" [shape=record rankdir=LR label="{<f0> core/text-transform7# |<f1> Text transform on cells in column sponsor using expression value.trim()}"];
+"core/text-transform8#" [shape=record rankdir=LR label="{<f0> core/text-transform8# |<f1> Text transform on cells in column sponsor using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform9#" [shape=record rankdir=LR label="{<f0> core/text-transform9# |<f1> Text transform on cells in column sponsor using expression value.trim()}"];
+"core/mass-edit2#" [shape=record rankdir=LR label="{<f0> core/mass-edit2# |<f1> Mass edit cells in column sponsor}"];
+"core/mass-edit3#" [shape=record rankdir=LR label="{<f0> core/mass-edit3# |<f1> Mass edit cells in column sponsor}"];
+"core/mass-edit4#" [shape=record rankdir=LR label="{<f0> core/mass-edit4# |<f1> Mass edit cells in column sponsor}"];
+"core/text-transform10#" [shape=record rankdir=LR label="{<f0> core/text-transform10# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"é\", \"e\")}"];
+"core/text-transform11#" [shape=record rankdir=LR label="{<f0> core/text-transform11# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"ü\", \"u\")}"];
+"core/text-transform12#" [shape=record rankdir=LR label="{<f0> core/text-transform12# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"ä\", \"a\")}"];
+"core/text-transform13#" [shape=record rankdir=LR label="{<f0> core/text-transform13# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"\\(\", \"\")}"];
+"core/text-transform14#" [shape=record rankdir=LR label="{<f0> core/text-transform14# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"\\)\", \"\")}"];
+"core/text-transform15#" [shape=record rankdir=LR label="{<f0> core/text-transform15# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"\\\"\", \"\")}"];
+"core/mass-edit5#" [shape=record rankdir=LR label="{<f0> core/mass-edit5# |<f1> Mass edit cells in column sponsor}"];
+"core/mass-edit6#" [shape=record rankdir=LR label="{<f0> core/mass-edit6# |<f1> Mass edit cells in column sponsor}"];
+"core/text-transform16#" [shape=record rankdir=LR label="{<f0> core/text-transform16# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"[\", \"\")}"];
+"core/text-transform17#" [shape=record rankdir=LR label="{<f0> core/text-transform17# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"]\", \"\")}"];
+"core/text-transform18#" [shape=record rankdir=LR label="{<f0> core/text-transform18# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"\\\\\", \"\")}"];
+"core/text-transform19#" [shape=record rankdir=LR label="{<f0> core/text-transform19# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\";\", \"\")}"];
+"core/text-transform20#" [shape=record rankdir=LR label="{<f0> core/text-transform20# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"ø\", \"o\")}"];
+"core/text-transform21#" [shape=record rankdir=LR label="{<f0> core/text-transform21# |<f1> Text transform on cells in column sponsor using expression value.toTitlecase()}"];
+"core/text-transform22#" [shape=record rankdir=LR label="{<f0> core/text-transform22# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"ö\", \"o\")}"];
+"core/text-transform23#" [shape=record rankdir=LR label="{<f0> core/text-transform23# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"ô\", \"o\")}"];
+"core/text-transform24#" [shape=record rankdir=LR label="{<f0> core/text-transform24# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"É\", \"E\")}"];
+"core/text-transform25#" [shape=record rankdir=LR label="{<f0> core/text-transform25# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"è\", \"e\")}"];
+"core/text-transform26#" [shape=record rankdir=LR label="{<f0> core/text-transform26# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"ç\", \"c\")}"];
+"core/text-transform27#" [shape=record rankdir=LR label="{<f0> core/text-transform27# |<f1> Text transform on cells in column event using expression value.trim()}"];
+"core/text-transform28#" [shape=record rankdir=LR label="{<f0> core/text-transform28# |<f1> Text transform on cells in column event using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform29#" [shape=record rankdir=LR label="{<f0> core/text-transform29# |<f1> Text transform on cells in column event using expression value.trim()}"];
+"core/mass-edit7#" [shape=record rankdir=LR label="{<f0> core/mass-edit7# |<f1> Mass edit cells in column event}"];
+"core/mass-edit8#" [shape=record rankdir=LR label="{<f0> core/mass-edit8# |<f1> Mass edit cells in column event}"];
+"core/mass-edit9#" [shape=record rankdir=LR label="{<f0> core/mass-edit9# |<f1> Mass edit cells in column event}"];
+"core/mass-edit10#" [shape=record rankdir=LR label="{<f0> core/mass-edit10# |<f1> Mass edit cells in column event}"];
+"core/text-transform30#" [shape=record rankdir=LR label="{<f0> core/text-transform30# |<f1> Text transform on cells in column event using expression grel\:value.replace(\"\\(\", \"\")}"];
+"core/text-transform31#" [shape=record rankdir=LR label="{<f0> core/text-transform31# |<f1> Text transform on cells in column event using expression grel\:value.replace(\"\\)\",\"\")}"];
+"core/text-transform32#" [shape=record rankdir=LR label="{<f0> core/text-transform32# |<f1> Text transform on cells in column event using expression grel\:value.replace(\"\\\"\",\"\")}"];
+"core/text-transform33#" [shape=record rankdir=LR label="{<f0> core/text-transform33# |<f1> Text transform on cells in column event using expression grel\:value.replace(\"[\",\"\")}"];
+"core/text-transform34#" [shape=record rankdir=LR label="{<f0> core/text-transform34# |<f1> Text transform on cells in column event using expression grel\:value.replace(\"]\",\"\")}"];
+"core/text-transform35#" [shape=record rankdir=LR label="{<f0> core/text-transform35# |<f1> Text transform on cells in column event using expression grel\:value.replace(\";\",\"\")}"];
+"core/text-transform36#" [shape=record rankdir=LR label="{<f0> core/text-transform36# |<f1> Text transform on cells in column event using expression value.toTitlecase()}"];
+"core/mass-edit11#" [shape=record rankdir=LR label="{<f0> core/mass-edit11# |<f1> Mass edit cells in column event}"];
+"core/text-transform37#" [shape=record rankdir=LR label="{<f0> core/text-transform37# |<f1> Text transform on cells in column event using expression grel\:value.replace(\"\{\",\"\")}"];
+"core/text-transform38#" [shape=record rankdir=LR label="{<f0> core/text-transform38# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(\"\}\",\"\")}"];
+"core/text-transform39#" [shape=record rankdir=LR label="{<f0> core/text-transform39# |<f1> Text transform on cells in column event using expression grel\:value.replace(\"\}\",\"\")}"];
+"core/text-transform40#" [shape=record rankdir=LR label="{<f0> core/text-transform40# |<f1> Text transform on cells in column event using expression grel\:value.replace(\"\{\",\"\")}"];
+"core/text-transform41#" [shape=record rankdir=LR label="{<f0> core/text-transform41# |<f1> Text transform on cells in column venue using expression value.trim()}"];
+"core/text-transform42#" [shape=record rankdir=LR label="{<f0> core/text-transform42# |<f1> Text transform on cells in column venue using expression value.replace(/\\s+/,' ')}"];
+"core/mass-edit12#" [shape=record rankdir=LR label="{<f0> core/mass-edit12# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit13#" [shape=record rankdir=LR label="{<f0> core/mass-edit13# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit14#" [shape=record rankdir=LR label="{<f0> core/mass-edit14# |<f1> Mass edit cells in column venue}"];
+"core/text-transform43#" [shape=record rankdir=LR label="{<f0> core/text-transform43# |<f1> Text transform on cells in column venue using expression grel\:value.replace(\"[\",\"\")}"];
+"core/text-transform44#" [shape=record rankdir=LR label="{<f0> core/text-transform44# |<f1> Text transform on cells in column venue using expression grel\:value.replace(\"]\",\"\")}"];
+"core/text-transform45#" [shape=record rankdir=LR label="{<f0> core/text-transform45# |<f1> Text transform on cells in column venue using expression grel\:value.replace(\"\{\",\"\")}"];
+"core/text-transform46#" [shape=record rankdir=LR label="{<f0> core/text-transform46# |<f1> Text transform on cells in column venue using expression grel\:value.replace(\"\}\",\"\")}"];
+"core/text-transform47#" [shape=record rankdir=LR label="{<f0> core/text-transform47# |<f1> Text transform on cells in column venue using expression grel\:value.replace(\"\\(\",\"\")}"];
+"core/text-transform48#" [shape=record rankdir=LR label="{<f0> core/text-transform48# |<f1> Text transform on cells in column venue using expression grel\:value.replace(\"\\)\",\"\")}"];
+"core/text-transform49#" [shape=record rankdir=LR label="{<f0> core/text-transform49# |<f1> Text transform on cells in column venue using expression grel\:value.replace(\"\\\\\",\"\")}"];
+"core/text-transform50#" [shape=record rankdir=LR label="{<f0> core/text-transform50# |<f1> Text transform on cells in column venue using expression grel\:value.replace(\"\\\"\",\"\")}"];
+"core/text-transform51#" [shape=record rankdir=LR label="{<f0> core/text-transform51# |<f1> Text transform on cells in column venue using expression grel\:value.replace(\";\",\"\")}"];
+"core/mass-edit15#" [shape=record rankdir=LR label="{<f0> core/mass-edit15# |<f1> Mass edit cells in column venue}"];
+"core/text-transform52#" [shape=record rankdir=LR label="{<f0> core/text-transform52# |<f1> Text transform on cells in column venue using expression grel\:value.replace(\",\",\" \")}"];
+"core/text-transform53#" [shape=record rankdir=LR label="{<f0> core/text-transform53# |<f1> Text transform on cells in column venue using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform54#" [shape=record rankdir=LR label="{<f0> core/text-transform54# |<f1> Text transform on cells in column venue using expression value.trim()}"];
+"core/text-transform55#" [shape=record rankdir=LR label="{<f0> core/text-transform55# |<f1> Text transform on cells in column venue using expression value.toTitlecase()}"];
+"core/text-transform56#" [shape=record rankdir=LR label="{<f0> core/text-transform56# |<f1> Text transform on cells in column place using expression value.trim()}"];
+"core/text-transform57#" [shape=record rankdir=LR label="{<f0> core/text-transform57# |<f1> Text transform on cells in column place using expression value.replace(/\\s+/,' ')}"];
+"core/mass-edit16#" [shape=record rankdir=LR label="{<f0> core/mass-edit16# |<f1> Mass edit cells in column place}"];
+"core/mass-edit17#" [shape=record rankdir=LR label="{<f0> core/mass-edit17# |<f1> Mass edit cells in column place}"];
+"core/mass-edit18#" [shape=record rankdir=LR label="{<f0> core/mass-edit18# |<f1> Mass edit cells in column place}"];
+"core/text-transform58#" [shape=record rankdir=LR label="{<f0> core/text-transform58# |<f1> Text transform on cells in column place using expression grel\:value.replace(\"[\",\"\")}"];
+"core/text-transform59#" [shape=record rankdir=LR label="{<f0> core/text-transform59# |<f1> Text transform on cells in column place using expression grel\:value.replace(\"]\",\"\")}"];
+"core/text-transform60#" [shape=record rankdir=LR label="{<f0> core/text-transform60# |<f1> Text transform on cells in column place using expression grel\:value.replace(\"\{\",\"\")}"];
+"core/text-transform61#" [shape=record rankdir=LR label="{<f0> core/text-transform61# |<f1> Text transform on cells in column place using expression grel\:value.replace(\"\}\",\"\")}"];
+"core/text-transform62#" [shape=record rankdir=LR label="{<f0> core/text-transform62# |<f1> Text transform on cells in column place using expression grel\:value.replace(\"\\(\",\"\")}"];
+"core/text-transform63#" [shape=record rankdir=LR label="{<f0> core/text-transform63# |<f1> Text transform on cells in column place using expression grel\:value.replace(\"\\)\",\"\")}"];
+"core/text-transform64#" [shape=record rankdir=LR label="{<f0> core/text-transform64# |<f1> Text transform on cells in column place using expression grel\:value.replace(\"\\\\\",\"\")}"];
+"core/text-transform65#" [shape=record rankdir=LR label="{<f0> core/text-transform65# |<f1> Text transform on cells in column place using expression grel\:value.replace(\"\\\"\",\"\")}"];
+"core/text-transform66#" [shape=record rankdir=LR label="{<f0> core/text-transform66# |<f1> Text transform on cells in column place using expression grel\:value.replace(\";\",\"\")}"];
+"core/mass-edit19#" [shape=record rankdir=LR label="{<f0> core/mass-edit19# |<f1> Mass edit cells in column place}"];
+"core/text-transform67#" [shape=record rankdir=LR label="{<f0> core/text-transform67# |<f1> Text transform on cells in column place using expression value.toUppercase()}"];
+"core/text-transform68#" [shape=record rankdir=LR label="{<f0> core/text-transform68# |<f1> Text transform on cells in column physical_description using expression value.trim()}"];
+"core/text-transform69#" [shape=record rankdir=LR label="{<f0> core/text-transform69# |<f1> Text transform on cells in column physical_description using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform70#" [shape=record rankdir=LR label="{<f0> core/text-transform70# |<f1> Text transform on cells in column physical_description using expression value.trim()}"];
+"core/mass-edit20#" [shape=record rankdir=LR label="{<f0> core/mass-edit20# |<f1> Mass edit cells in column physical_description}"];
+"core/mass-edit21#" [shape=record rankdir=LR label="{<f0> core/mass-edit21# |<f1> Mass edit cells in column physical_description}"];
+"core/mass-edit22#" [shape=record rankdir=LR label="{<f0> core/mass-edit22# |<f1> Mass edit cells in column physical_description}"];
+"core/text-transform71#" [shape=record rankdir=LR label="{<f0> core/text-transform71# |<f1> Text transform on cells in column occasion using expression value.trim()}"];
+"core/text-transform72#" [shape=record rankdir=LR label="{<f0> core/text-transform72# |<f1> Text transform on cells in column occasion using expression value.replace(/\\s+/,' ')}"];
+"core/mass-edit23#" [shape=record rankdir=LR label="{<f0> core/mass-edit23# |<f1> Mass edit cells in column occasion}"];
+"core/mass-edit24#" [shape=record rankdir=LR label="{<f0> core/mass-edit24# |<f1> Mass edit cells in column occasion}"];
+"core/mass-edit25#" [shape=record rankdir=LR label="{<f0> core/mass-edit25# |<f1> Mass edit cells in column occasion}"];
+"core/mass-edit26#" [shape=record rankdir=LR label="{<f0> core/mass-edit26# |<f1> Mass edit cells in column occasion}"];
+"core/text-transform73#" [shape=record rankdir=LR label="{<f0> core/text-transform73# |<f1> Text transform on cells in column occasion using expression grel\:value.replace(\"[\",\"\")}"];
+"core/text-transform74#" [shape=record rankdir=LR label="{<f0> core/text-transform74# |<f1> Text transform on cells in column occasion using expression grel\:value.replace(\"]\",\"\")}"];
+"core/text-transform75#" [shape=record rankdir=LR label="{<f0> core/text-transform75# |<f1> Text transform on cells in column occasion using expression grel\:value.replace(\"\{\",\"\")}"];
+"core/text-transform76#" [shape=record rankdir=LR label="{<f0> core/text-transform76# |<f1> Text transform on cells in column occasion using expression grel\:value.replace(\"\}\",\"\")}"];
+"core/text-transform77#" [shape=record rankdir=LR label="{<f0> core/text-transform77# |<f1> Text transform on cells in column occasion using expression grel\:value.replace(\"\\(\",\"\")}"];
+"core/text-transform78#" [shape=record rankdir=LR label="{<f0> core/text-transform78# |<f1> Text transform on cells in column occasion using expression grel\:value.replace(\"\\)\",\"\")}"];
+"core/text-transform79#" [shape=record rankdir=LR label="{<f0> core/text-transform79# |<f1> Text transform on cells in column occasion using expression grel\:value.replace(\"\\\\\",\"\")}"];
+"core/text-transform80#" [shape=record rankdir=LR label="{<f0> core/text-transform80# |<f1> Text transform on cells in column occasion using expression grel\:value.replace(\"\\\"\",\"\")}"];
+"core/text-transform81#" [shape=record rankdir=LR label="{<f0> core/text-transform81# |<f1> Text transform on cells in column occasion using expression grel\:value.replace(\";\",\"\")}"];
+"core/mass-edit27#" [shape=record rankdir=LR label="{<f0> core/mass-edit27# |<f1> Mass edit cells in column occasion}"];
+"core/mass-edit28#" [shape=record rankdir=LR label="{<f0> core/mass-edit28# |<f1> Mass edit cells in column occasion}"];
+"core/mass-edit29#" [shape=record rankdir=LR label="{<f0> core/mass-edit29# |<f1> Mass edit cells in column occasion}"];
+"core/mass-edit30#" [shape=record rankdir=LR label="{<f0> core/mass-edit30# |<f1> Mass edit cells in column occasion}"];
+"core/mass-edit31#" [shape=record rankdir=LR label="{<f0> core/mass-edit31# |<f1> Mass edit cells in column occasion}"];
+"core/text-transform82#" [shape=record rankdir=LR label="{<f0> core/text-transform82# |<f1> Text transform on cells in column occasion using expression grel\:value.replace(\"OTHER \", \"\")}"];
+"core/text-transform83#" [shape=record rankdir=LR label="{<f0> core/text-transform83# |<f1> Text transform on cells in column occasion using expression grel\:value.replace(\"OTHER,\" \"\")}"];
+"core/text-transform84#" [shape=record rankdir=LR label="{<f0> core/text-transform84# |<f1> Text transform on cells in column occasion using expression grel\:value.replace(\"OTHER,\", \"\")}"];
+"core/mass-edit32#" [shape=record rankdir=LR label="{<f0> core/mass-edit32# |<f1> Mass edit cells in column occasion}"];
+"core/mass-edit33#" [shape=record rankdir=LR label="{<f0> core/mass-edit33# |<f1> Mass edit cells in column occasion}"];
+"core/text-transform85#" [shape=record rankdir=LR label="{<f0> core/text-transform85# |<f1> Text transform on cells in column occasion using expression value.trim()}"];
+"core/text-transform86#" [shape=record rankdir=LR label="{<f0> core/text-transform86# |<f1> Text transform on cells in column occasion using expression value.replace(/\\s+/,' ')}"];
+"core/mass-edit34#" [shape=record rankdir=LR label="{<f0> core/mass-edit34# |<f1> Mass edit cells in column occasion}"];
+"core/mass-edit35#" [shape=record rankdir=LR label="{<f0> core/mass-edit35# |<f1> Mass edit cells in column occasion}"];
+"core/mass-edit36#" [shape=record rankdir=LR label="{<f0> core/mass-edit36# |<f1> Mass edit cells in column occasion}"];
+"core/mass-edit37#" [shape=record rankdir=LR label="{<f0> core/mass-edit37# |<f1> Mass edit cells in column occasion}"];
+"core/mass-edit38#" [shape=record rankdir=LR label="{<f0> core/mass-edit38# |<f1> Mass edit cells in column occasion}"];
+"core/text-transform87#" [shape=record rankdir=LR label="{<f0> core/text-transform87# |<f1> Text transform on cells in column occasion using expression value.toTitlecase()}"];
+"core/text-transform88#" [shape=record rankdir=LR label="{<f0> core/text-transform88# |<f1> Text transform on cells in column notes using expression value.trim()}"];
+"core/text-transform89#" [shape=record rankdir=LR label="{<f0> core/text-transform89# |<f1> Text transform on cells in column notes using expression value.replace(/\\s+/,' ')}"];
+"core/mass-edit39#" [shape=record rankdir=LR label="{<f0> core/mass-edit39# |<f1> Mass edit cells in column notes}"];
+"core/mass-edit40#" [shape=record rankdir=LR label="{<f0> core/mass-edit40# |<f1> Mass edit cells in column notes}"];
+"core/mass-edit41#" [shape=record rankdir=LR label="{<f0> core/mass-edit41# |<f1> Mass edit cells in column notes}"];
+"core/text-transform90#" [shape=record rankdir=LR label="{<f0> core/text-transform90# |<f1> Text transform on cells in column notes using expression grel\:value.replace(\"\\\"\",\"\")}"];
+"core/text-transform91#" [shape=record rankdir=LR label="{<f0> core/text-transform91# |<f1> Text transform on cells in column notes using expression grel\:value.replace(\"[\",\"\")}"];
+"core/text-transform92#" [shape=record rankdir=LR label="{<f0> core/text-transform92# |<f1> Text transform on cells in column notes using expression grel\:value.replace(\"]\",\"\")}"];
+"core/text-transform93#" [shape=record rankdir=LR label="{<f0> core/text-transform93# |<f1> Text transform on cells in column notes using expression grel\:value.replace(\"\\(\",\"\")}"];
+"core/text-transform94#" [shape=record rankdir=LR label="{<f0> core/text-transform94# |<f1> Text transform on cells in column notes using expression grel\:value.replace(\"\\)\",\"\")}"];
+"core/text-transform95#" [shape=record rankdir=LR label="{<f0> core/text-transform95# |<f1> Text transform on cells in column notes using expression grel\:value.replace(\"\\\\\",\"\")}"];
+"core/text-transform96#" [shape=record rankdir=LR label="{<f0> core/text-transform96# |<f1> Text transform on cells in column notes using expression value.toUppercase()}"];
+"core/text-transform97#" [shape=record rankdir=LR label="{<f0> core/text-transform97# |<f1> Text transform on cells in column date using expression value.trim()}"];
+"core/text-transform98#" [shape=record rankdir=LR label="{<f0> core/text-transform98# |<f1> Text transform on cells in column date using expression value.replace(/\\s+/,' ')}"];
+"core/text-transform99#" [shape=record rankdir=LR label="{<f0> core/text-transform99# |<f1> Text transform on cells in column date using expression value.toDate()}"];
+"core/text-transform100#" [shape=record rankdir=LR label="{<f0> core/text-transform100# |<f1> Text transform on cells in column sponsor using expression value.trim()}"];
+"core/text-transform101#" [shape=record rankdir=LR label="{<f0> core/text-transform101# |<f1> Text transform on cells in column sponsor using expression grel\:value.replace(/^\\'/, \"\")}"];
+"core/text-transform102#" [shape=record rankdir=LR label="{<f0> core/text-transform102# |<f1> Text transform on cells in column event using expression grel\:value.replace(/^\\'/, \"\")}"];
+"core/text-transform103#" [shape=record rankdir=LR label="{<f0> core/text-transform103# |<f1> Text transform on cells in column sponsor using expression value.toTitlecase()}"];
+"core/text-transform104#" [shape=record rankdir=LR label="{<f0> core/text-transform104# |<f1> Text transform on cells in column venue using expression grel\:value.replace(\"Other \", \"\")}"];
+"core/mass-edit42#" [shape=record rankdir=LR label="{<f0> core/mass-edit42# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit43#" [shape=record rankdir=LR label="{<f0> core/mass-edit43# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit44#" [shape=record rankdir=LR label="{<f0> core/mass-edit44# |<f1> Mass edit cells in column venue}"];
+"core/text-transform105#" [shape=record rankdir=LR label="{<f0> core/text-transform105# |<f1> Text transform on cells in column place using expression grel\:value.replace(/^\\'/, \"\")}"];
+"core/mass-edit45#" [shape=record rankdir=LR label="{<f0> core/mass-edit45# |<f1> Mass edit cells in column physical_description}"];
+"core/text-transform106#" [shape=record rankdir=LR label="{<f0> core/text-transform106# |<f1> Text transform on cells in column location using expression value.trim()}"];
+"core/text-transform107#" [shape=record rankdir=LR label="{<f0> core/text-transform107# |<f1> Text transform on cells in column location using expression value.replace(/\\s+/,' ')}"];
+"core/mass-edit46#" [shape=record rankdir=LR label="{<f0> core/mass-edit46# |<f1> Mass edit cells in column location}"];
+"core/mass-edit47#" [shape=record rankdir=LR label="{<f0> core/mass-edit47# |<f1> Mass edit cells in column location}"];
+"core/mass-edit48#" [shape=record rankdir=LR label="{<f0> core/mass-edit48# |<f1> Mass edit cells in column location}"];
+"core/text-transform108#" [shape=record rankdir=LR label="{<f0> core/text-transform108# |<f1> Text transform on cells in column location using expression grel\:value.replace(\"[\",\"\")}"];
+"core/text-transform109#" [shape=record rankdir=LR label="{<f0> core/text-transform109# |<f1> Text transform on cells in column location using expression grel\:value.replace(\"]\",\"\")}"];
+"core/text-transform110#" [shape=record rankdir=LR label="{<f0> core/text-transform110# |<f1> Text transform on cells in column location using expression grel\:value.replace(\"\{\",\"\")}"];
+"core/text-transform111#" [shape=record rankdir=LR label="{<f0> core/text-transform111# |<f1> Text transform on cells in column location using expression grel\:value.replace(\"\}\",\"\")}"];
+"core/text-transform112#" [shape=record rankdir=LR label="{<f0> core/text-transform112# |<f1> Text transform on cells in column location using expression grel\:value.replace(\"\\(\",\"\")}"];
+"core/text-transform113#" [shape=record rankdir=LR label="{<f0> core/text-transform113# |<f1> Text transform on cells in column location using expression grel\:value.replace(\"\\)\",\"\")}"];
+"core/text-transform114#" [shape=record rankdir=LR label="{<f0> core/text-transform114# |<f1> Text transform on cells in column location using expression grel\:value.replace(\"\\\\\",\"\")}"];
+"core/text-transform115#" [shape=record rankdir=LR label="{<f0> core/text-transform115# |<f1> Text transform on cells in column location using expression grel\:value.replace(\"\\\"\",\"\")}"];
+"core/text-transform116#" [shape=record rankdir=LR label="{<f0> core/text-transform116# |<f1> Text transform on cells in column location using expression grel\:value.replace(\";\",\"\")}"];
+"core/text-transform117#" [shape=record rankdir=LR label="{<f0> core/text-transform117# |<f1> Text transform on cells in column location using expression grel\:value.replace(/^\\'/, \"\")}"];
+"core/text-transform118#" [shape=record rankdir=LR label="{<f0> core/text-transform118# |<f1> Text transform on cells in column location using expression value.toTitlecase()}"];
+"core/mass-edit49#" [shape=record rankdir=LR label="{<f0> core/mass-edit49# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit50#" [shape=record rankdir=LR label="{<f0> core/mass-edit50# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit51#" [shape=record rankdir=LR label="{<f0> core/mass-edit51# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit52#" [shape=record rankdir=LR label="{<f0> core/mass-edit52# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit53#" [shape=record rankdir=LR label="{<f0> core/mass-edit53# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit54#" [shape=record rankdir=LR label="{<f0> core/mass-edit54# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit55#" [shape=record rankdir=LR label="{<f0> core/mass-edit55# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit56#" [shape=record rankdir=LR label="{<f0> core/mass-edit56# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit57#" [shape=record rankdir=LR label="{<f0> core/mass-edit57# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit58#" [shape=record rankdir=LR label="{<f0> core/mass-edit58# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit59#" [shape=record rankdir=LR label="{<f0> core/mass-edit59# |<f1> Mass edit cells in column venue}"];
+"core/mass-edit60#" [shape=record rankdir=LR label="{<f0> core/mass-edit60# |<f1> Mass edit cells in column venue}"];
+"core/column-removal0#" [shape=record rankdir=LR label="{<f0> core/column-removal0# |<f1> Remove column keywords}"];
+"core/column-removal1#" [shape=record rankdir=LR label="{<f0> core/column-removal1# |<f1> Remove column language}"];
+"core/column-removal2#" [shape=record rankdir=LR label="{<f0> core/column-removal2# |<f1> Remove column location_type}"];
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+table183
+table0
+table1
+table2
+table3
+table4
+table5
+table6
+table7
+table8
+table9
+table10
+table11
+table12
+table13
+table14
+table15
+table16
+table17
+table18
+table19
+table20
+table21
+table22
+table23
+table24
+table25
+table26
+table27
+table28
+table29
+table30
+table31
+table32
+table33
+table34
+table35
+table36
+table37
+table38
+table39
+table40
+table41
+table42
+table43
+table44
+table45
+table46
+table47
+table48
+table49
+table50
+table51
+table52
+table53
+table54
+table55
+table56
+table57
+table58
+table59
+table60
+table61
+table62
+table63
+table64
+table65
+table66
+table67
+table68
+table69
+table70
+table71
+table72
+table73
+table74
+table75
+table76
+table77
+table78
+table79
+table80
+table81
+table82
+table83
+table84
+table85
+table86
+table87
+table88
+table89
+table90
+table91
+table92
+table93
+table94
+table95
+table96
+table97
+table98
+table99
+table100
+table101
+table102
+table103
+table104
+table105
+table106
+table107
+table108
+table109
+table110
+table111
+table112
+table113
+table114
+table115
+table116
+table117
+table118
+table119
+table120
+table121
+table122
+table123
+table124
+table125
+table126
+table127
+table128
+table129
+table130
+table131
+table132
+table133
+table134
+table135
+table136
+table137
+table138
+table139
+table140
+table141
+table142
+table143
+table144
+table145
+table146
+table147
+table148
+table149
+table150
+table151
+table152
+table153
+table154
+table155
+table156
+table157
+table158
+table159
+table160
+table161
+table162
+table163
+table164
+table165
+table166
+table167
+table168
+table169
+table170
+table171
+table172
+table173
+table174
+table175
+table176
+table177
+table178
+table179
+table180
+table181
+table182
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+"col-name:name"
+"expression:value.trim()"
+"expression:value.replace(/\\s+/,'_')"
+"expression:grel:value.replace(\"é\",_\"e\")"
+"expression:grel:value.replace(\"ü\",_\"u\")"
+"expression:grel:value.replace(\"\\\"\",_\"\")"
+"expression:grel:value.replace(\";\",_\"\")"
+"col-name:sponsor"
+"expression:grel:value.replace(\"ä\",_\"a\")"
+"expression:grel:value.replace(\"\\(\",_\"\")"
+"expression:grel:value.replace(\"\\)\",_\"\")"
+"expression:grel:value.replace(\"[\",_\"\")"
+"expression:grel:value.replace(\"]\",_\"\")"
+"expression:grel:value.replace(\"\\\\\",_\"\")"
+"expression:grel:value.replace(\"ø\",_\"o\")"
+"expression:value.toTitlecase()"
+"expression:grel:value.replace(\"ö\",_\"o\")"
+"expression:grel:value.replace(\"ô\",_\"o\")"
+"expression:grel:value.replace(\"É\",_\"E\")"
+"expression:grel:value.replace(\"è\",_\"e\")"
+"expression:grel:value.replace(\"ç\",_\"c\")"
+"col-name:event"
+"expression:grel:value.replace(\"\\)\",\"\")"
+"expression:grel:value.replace(\"\\\"\",\"\")"
+"expression:grel:value.replace(\"[\",\"\")"
+"expression:grel:value.replace(\"]\",\"\")"
+"expression:grel:value.replace(\";\",\"\")"
+"expression:grel:value.replace(\"{\",\"\")"
+"expression:grel:value.replace(\"}\",\"\")"
+"col-name:venue"
+"expression:grel:value.replace(\"\\(\",\"\")"
+"expression:grel:value.replace(\"\\\\\",\"\")"
+"expression:grel:value.replace(\",\",\"_\")"
+"col-name:place"
+"expression:value.toUppercase()"
+"col-name:physical_description"
+"col-name:occasion"
+"expression:grel:value.replace(\"OTHER_\",_\"\")"
+"expression:grel:value.replace(\"OTHER,\"_\"\")"
+"expression:grel:value.replace(\"OTHER,\",_\"\")"
+"col-name:notes"
+"col-name:date"
+"expression:value.toDate()"
+"expression:grel:value.replace(/^\\'/,_\"\")"
+"expression:grel:value.replace(\"Other_\",_\"\")"
+"col-name:location"
+"col-name:keywords"
+"col-name:language"
+"col-name:location_type"
+
+/* Edges representing connections between programs and channels */
+"core/text-transform0#" -> table1
+"col-name:name" -> "core/text-transform0#"
+"expression:value.trim()" -> "core/text-transform0#"
+table0 -> "core/text-transform0#"
+"core/text-transform1#" -> table2
+"col-name:name" -> "core/text-transform1#"
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform1#"
+table1 -> "core/text-transform1#"
+"core/text-transform2#" -> table3
+"col-name:name" -> "core/text-transform2#"
+"expression:value.trim()" -> "core/text-transform2#"
+table2 -> "core/text-transform2#"
+"core/mass-edit0#" -> table4
+"col-name:name" -> "core/mass-edit0#"
+table3 -> "core/mass-edit0#"
+"core/mass-edit1#" -> table5
+"col-name:name" -> "core/mass-edit1#"
+table4 -> "core/mass-edit1#"
+"core/text-transform3#" -> table6
+"col-name:name" -> "core/text-transform3#"
+"expression:grel:value.replace(\"é\",_\"e\")" -> "core/text-transform3#"
+table5 -> "core/text-transform3#"
+"core/text-transform4#" -> table7
+"col-name:name" -> "core/text-transform4#"
+"expression:grel:value.replace(\"ü\",_\"u\")" -> "core/text-transform4#"
+table6 -> "core/text-transform4#"
+"core/text-transform5#" -> table8
+"col-name:name" -> "core/text-transform5#"
+"expression:grel:value.replace(\"\\\"\",_\"\")" -> "core/text-transform5#"
+table7 -> "core/text-transform5#"
+"core/text-transform6#" -> table9
+"col-name:name" -> "core/text-transform6#"
+"expression:grel:value.replace(\";\",_\"\")" -> "core/text-transform6#"
+table8 -> "core/text-transform6#"
+"core/text-transform7#" -> table10
+"col-name:sponsor" -> "core/text-transform7#"
+"expression:value.trim()" -> "core/text-transform7#"
+table9 -> "core/text-transform7#"
+"core/text-transform8#" -> table11
+"col-name:sponsor" -> "core/text-transform8#"
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform8#"
+table10 -> "core/text-transform8#"
+"core/text-transform9#" -> table12
+"col-name:sponsor" -> "core/text-transform9#"
+"expression:value.trim()" -> "core/text-transform9#"
+table11 -> "core/text-transform9#"
+"core/mass-edit2#" -> table13
+"col-name:sponsor" -> "core/mass-edit2#"
+table12 -> "core/mass-edit2#"
+"core/mass-edit3#" -> table14
+"col-name:sponsor" -> "core/mass-edit3#"
+table13 -> "core/mass-edit3#"
+"core/mass-edit4#" -> table15
+"col-name:sponsor" -> "core/mass-edit4#"
+table14 -> "core/mass-edit4#"
+"core/text-transform10#" -> table16
+"col-name:sponsor" -> "core/text-transform10#"
+"expression:grel:value.replace(\"é\",_\"e\")" -> "core/text-transform10#"
+table15 -> "core/text-transform10#"
+"core/text-transform11#" -> table17
+"col-name:sponsor" -> "core/text-transform11#"
+"expression:grel:value.replace(\"ü\",_\"u\")" -> "core/text-transform11#"
+table16 -> "core/text-transform11#"
+"core/text-transform12#" -> table18
+"col-name:sponsor" -> "core/text-transform12#"
+"expression:grel:value.replace(\"ä\",_\"a\")" -> "core/text-transform12#"
+table17 -> "core/text-transform12#"
+"core/text-transform13#" -> table19
+"col-name:sponsor" -> "core/text-transform13#"
+"expression:grel:value.replace(\"\\(\",_\"\")" -> "core/text-transform13#"
+table18 -> "core/text-transform13#"
+"core/text-transform14#" -> table20
+"col-name:sponsor" -> "core/text-transform14#"
+"expression:grel:value.replace(\"\\)\",_\"\")" -> "core/text-transform14#"
+table19 -> "core/text-transform14#"
+"core/text-transform15#" -> table21
+"col-name:sponsor" -> "core/text-transform15#"
+"expression:grel:value.replace(\"\\\"\",_\"\")" -> "core/text-transform15#"
+table20 -> "core/text-transform15#"
+"core/mass-edit5#" -> table22
+"col-name:sponsor" -> "core/mass-edit5#"
+table21 -> "core/mass-edit5#"
+"core/mass-edit6#" -> table23
+"col-name:sponsor" -> "core/mass-edit6#"
+table22 -> "core/mass-edit6#"
+"core/text-transform16#" -> table24
+"col-name:sponsor" -> "core/text-transform16#"
+"expression:grel:value.replace(\"[\",_\"\")" -> "core/text-transform16#"
+table23 -> "core/text-transform16#"
+"core/text-transform17#" -> table25
+"col-name:sponsor" -> "core/text-transform17#"
+"expression:grel:value.replace(\"]\",_\"\")" -> "core/text-transform17#"
+table24 -> "core/text-transform17#"
+"core/text-transform18#" -> table26
+"col-name:sponsor" -> "core/text-transform18#"
+"expression:grel:value.replace(\"\\\\\",_\"\")" -> "core/text-transform18#"
+table25 -> "core/text-transform18#"
+"core/text-transform19#" -> table27
+"col-name:sponsor" -> "core/text-transform19#"
+"expression:grel:value.replace(\";\",_\"\")" -> "core/text-transform19#"
+table26 -> "core/text-transform19#"
+"core/text-transform20#" -> table28
+"col-name:sponsor" -> "core/text-transform20#"
+"expression:grel:value.replace(\"ø\",_\"o\")" -> "core/text-transform20#"
+table27 -> "core/text-transform20#"
+"core/text-transform21#" -> table29
+"col-name:sponsor" -> "core/text-transform21#"
+"expression:value.toTitlecase()" -> "core/text-transform21#"
+table28 -> "core/text-transform21#"
+"core/text-transform22#" -> table30
+"col-name:sponsor" -> "core/text-transform22#"
+"expression:grel:value.replace(\"ö\",_\"o\")" -> "core/text-transform22#"
+table29 -> "core/text-transform22#"
+"core/text-transform23#" -> table31
+"col-name:sponsor" -> "core/text-transform23#"
+"expression:grel:value.replace(\"ô\",_\"o\")" -> "core/text-transform23#"
+table30 -> "core/text-transform23#"
+"core/text-transform24#" -> table32
+"col-name:sponsor" -> "core/text-transform24#"
+"expression:grel:value.replace(\"É\",_\"E\")" -> "core/text-transform24#"
+table31 -> "core/text-transform24#"
+"core/text-transform25#" -> table33
+"col-name:sponsor" -> "core/text-transform25#"
+"expression:grel:value.replace(\"è\",_\"e\")" -> "core/text-transform25#"
+table32 -> "core/text-transform25#"
+"core/text-transform26#" -> table34
+"col-name:sponsor" -> "core/text-transform26#"
+"expression:grel:value.replace(\"ç\",_\"c\")" -> "core/text-transform26#"
+table33 -> "core/text-transform26#"
+"core/text-transform27#" -> table35
+"col-name:event" -> "core/text-transform27#"
+"expression:value.trim()" -> "core/text-transform27#"
+table34 -> "core/text-transform27#"
+"core/text-transform28#" -> table36
+"col-name:event" -> "core/text-transform28#"
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform28#"
+table35 -> "core/text-transform28#"
+"core/text-transform29#" -> table37
+"col-name:event" -> "core/text-transform29#"
+"expression:value.trim()" -> "core/text-transform29#"
+table36 -> "core/text-transform29#"
+"core/mass-edit7#" -> table38
+"col-name:event" -> "core/mass-edit7#"
+table37 -> "core/mass-edit7#"
+"core/mass-edit8#" -> table39
+"col-name:event" -> "core/mass-edit8#"
+table38 -> "core/mass-edit8#"
+"core/mass-edit9#" -> table40
+"col-name:event" -> "core/mass-edit9#"
+table39 -> "core/mass-edit9#"
+"core/mass-edit10#" -> table41
+"col-name:event" -> "core/mass-edit10#"
+table40 -> "core/mass-edit10#"
+"core/text-transform30#" -> table42
+"col-name:event" -> "core/text-transform30#"
+"expression:grel:value.replace(\"\\(\",_\"\")" -> "core/text-transform30#"
+table41 -> "core/text-transform30#"
+"core/text-transform31#" -> table43
+"col-name:event" -> "core/text-transform31#"
+"expression:grel:value.replace(\"\\)\",\"\")" -> "core/text-transform31#"
+table42 -> "core/text-transform31#"
+"core/text-transform32#" -> table44
+"col-name:event" -> "core/text-transform32#"
+"expression:grel:value.replace(\"\\\"\",\"\")" -> "core/text-transform32#"
+table43 -> "core/text-transform32#"
+"core/text-transform33#" -> table45
+"col-name:event" -> "core/text-transform33#"
+"expression:grel:value.replace(\"[\",\"\")" -> "core/text-transform33#"
+table44 -> "core/text-transform33#"
+"core/text-transform34#" -> table46
+"col-name:event" -> "core/text-transform34#"
+"expression:grel:value.replace(\"]\",\"\")" -> "core/text-transform34#"
+table45 -> "core/text-transform34#"
+"core/text-transform35#" -> table47
+"col-name:event" -> "core/text-transform35#"
+"expression:grel:value.replace(\";\",\"\")" -> "core/text-transform35#"
+table46 -> "core/text-transform35#"
+"core/text-transform36#" -> table48
+"col-name:event" -> "core/text-transform36#"
+"expression:value.toTitlecase()" -> "core/text-transform36#"
+table47 -> "core/text-transform36#"
+"core/mass-edit11#" -> table49
+"col-name:event" -> "core/mass-edit11#"
+table48 -> "core/mass-edit11#"
+"core/text-transform37#" -> table50
+"col-name:event" -> "core/text-transform37#"
+"expression:grel:value.replace(\"{\",\"\")" -> "core/text-transform37#"
+table49 -> "core/text-transform37#"
+"core/text-transform38#" -> table51
+"col-name:sponsor" -> "core/text-transform38#"
+"expression:grel:value.replace(\"}\",\"\")" -> "core/text-transform38#"
+table50 -> "core/text-transform38#"
+"core/text-transform39#" -> table52
+"col-name:event" -> "core/text-transform39#"
+"expression:grel:value.replace(\"}\",\"\")" -> "core/text-transform39#"
+table51 -> "core/text-transform39#"
+"core/text-transform40#" -> table53
+"col-name:event" -> "core/text-transform40#"
+"expression:grel:value.replace(\"{\",\"\")" -> "core/text-transform40#"
+table52 -> "core/text-transform40#"
+"core/text-transform41#" -> table54
+"col-name:venue" -> "core/text-transform41#"
+"expression:value.trim()" -> "core/text-transform41#"
+table53 -> "core/text-transform41#"
+"core/text-transform42#" -> table55
+"col-name:venue" -> "core/text-transform42#"
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform42#"
+table54 -> "core/text-transform42#"
+"core/mass-edit12#" -> table56
+"col-name:venue" -> "core/mass-edit12#"
+table55 -> "core/mass-edit12#"
+"core/mass-edit13#" -> table57
+"col-name:venue" -> "core/mass-edit13#"
+table56 -> "core/mass-edit13#"
+"core/mass-edit14#" -> table58
+"col-name:venue" -> "core/mass-edit14#"
+table57 -> "core/mass-edit14#"
+"core/text-transform43#" -> table59
+"col-name:venue" -> "core/text-transform43#"
+"expression:grel:value.replace(\"[\",\"\")" -> "core/text-transform43#"
+table58 -> "core/text-transform43#"
+"core/text-transform44#" -> table60
+"col-name:venue" -> "core/text-transform44#"
+"expression:grel:value.replace(\"]\",\"\")" -> "core/text-transform44#"
+table59 -> "core/text-transform44#"
+"core/text-transform45#" -> table61
+"col-name:venue" -> "core/text-transform45#"
+"expression:grel:value.replace(\"{\",\"\")" -> "core/text-transform45#"
+table60 -> "core/text-transform45#"
+"core/text-transform46#" -> table62
+"col-name:venue" -> "core/text-transform46#"
+"expression:grel:value.replace(\"}\",\"\")" -> "core/text-transform46#"
+table61 -> "core/text-transform46#"
+"core/text-transform47#" -> table63
+"col-name:venue" -> "core/text-transform47#"
+"expression:grel:value.replace(\"\\(\",\"\")" -> "core/text-transform47#"
+table62 -> "core/text-transform47#"
+"core/text-transform48#" -> table64
+"col-name:venue" -> "core/text-transform48#"
+"expression:grel:value.replace(\"\\)\",\"\")" -> "core/text-transform48#"
+table63 -> "core/text-transform48#"
+"core/text-transform49#" -> table65
+"col-name:venue" -> "core/text-transform49#"
+"expression:grel:value.replace(\"\\\\\",\"\")" -> "core/text-transform49#"
+table64 -> "core/text-transform49#"
+"core/text-transform50#" -> table66
+"col-name:venue" -> "core/text-transform50#"
+"expression:grel:value.replace(\"\\\"\",\"\")" -> "core/text-transform50#"
+table65 -> "core/text-transform50#"
+"core/text-transform51#" -> table67
+"col-name:venue" -> "core/text-transform51#"
+"expression:grel:value.replace(\";\",\"\")" -> "core/text-transform51#"
+table66 -> "core/text-transform51#"
+"core/mass-edit15#" -> table68
+"col-name:venue" -> "core/mass-edit15#"
+table67 -> "core/mass-edit15#"
+"core/text-transform52#" -> table69
+"col-name:venue" -> "core/text-transform52#"
+"expression:grel:value.replace(\",\",\"_\")" -> "core/text-transform52#"
+table68 -> "core/text-transform52#"
+"core/text-transform53#" -> table70
+"col-name:venue" -> "core/text-transform53#"
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform53#"
+table69 -> "core/text-transform53#"
+"core/text-transform54#" -> table71
+"col-name:venue" -> "core/text-transform54#"
+"expression:value.trim()" -> "core/text-transform54#"
+table70 -> "core/text-transform54#"
+"core/text-transform55#" -> table72
+"col-name:venue" -> "core/text-transform55#"
+"expression:value.toTitlecase()" -> "core/text-transform55#"
+table71 -> "core/text-transform55#"
+"core/text-transform56#" -> table73
+"col-name:place" -> "core/text-transform56#"
+"expression:value.trim()" -> "core/text-transform56#"
+table72 -> "core/text-transform56#"
+"core/text-transform57#" -> table74
+"col-name:place" -> "core/text-transform57#"
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform57#"
+table73 -> "core/text-transform57#"
+"core/mass-edit16#" -> table75
+"col-name:place" -> "core/mass-edit16#"
+table74 -> "core/mass-edit16#"
+"core/mass-edit17#" -> table76
+"col-name:place" -> "core/mass-edit17#"
+table75 -> "core/mass-edit17#"
+"core/mass-edit18#" -> table77
+"col-name:place" -> "core/mass-edit18#"
+table76 -> "core/mass-edit18#"
+"core/text-transform58#" -> table78
+"col-name:place" -> "core/text-transform58#"
+"expression:grel:value.replace(\"[\",\"\")" -> "core/text-transform58#"
+table77 -> "core/text-transform58#"
+"core/text-transform59#" -> table79
+"col-name:place" -> "core/text-transform59#"
+"expression:grel:value.replace(\"]\",\"\")" -> "core/text-transform59#"
+table78 -> "core/text-transform59#"
+"core/text-transform60#" -> table80
+"col-name:place" -> "core/text-transform60#"
+"expression:grel:value.replace(\"{\",\"\")" -> "core/text-transform60#"
+table79 -> "core/text-transform60#"
+"core/text-transform61#" -> table81
+"col-name:place" -> "core/text-transform61#"
+"expression:grel:value.replace(\"}\",\"\")" -> "core/text-transform61#"
+table80 -> "core/text-transform61#"
+"core/text-transform62#" -> table82
+"col-name:place" -> "core/text-transform62#"
+"expression:grel:value.replace(\"\\(\",\"\")" -> "core/text-transform62#"
+table81 -> "core/text-transform62#"
+"core/text-transform63#" -> table83
+"col-name:place" -> "core/text-transform63#"
+"expression:grel:value.replace(\"\\)\",\"\")" -> "core/text-transform63#"
+table82 -> "core/text-transform63#"
+"core/text-transform64#" -> table84
+"col-name:place" -> "core/text-transform64#"
+"expression:grel:value.replace(\"\\\\\",\"\")" -> "core/text-transform64#"
+table83 -> "core/text-transform64#"
+"core/text-transform65#" -> table85
+"col-name:place" -> "core/text-transform65#"
+"expression:grel:value.replace(\"\\\"\",\"\")" -> "core/text-transform65#"
+table84 -> "core/text-transform65#"
+"core/text-transform66#" -> table86
+"col-name:place" -> "core/text-transform66#"
+"expression:grel:value.replace(\";\",\"\")" -> "core/text-transform66#"
+table85 -> "core/text-transform66#"
+"core/mass-edit19#" -> table87
+"col-name:place" -> "core/mass-edit19#"
+table86 -> "core/mass-edit19#"
+"core/text-transform67#" -> table88
+"col-name:place" -> "core/text-transform67#"
+"expression:value.toUppercase()" -> "core/text-transform67#"
+table87 -> "core/text-transform67#"
+"core/text-transform68#" -> table89
+"col-name:physical_description" -> "core/text-transform68#"
+"expression:value.trim()" -> "core/text-transform68#"
+table88 -> "core/text-transform68#"
+"core/text-transform69#" -> table90
+"col-name:physical_description" -> "core/text-transform69#"
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform69#"
+table89 -> "core/text-transform69#"
+"core/text-transform70#" -> table91
+"col-name:physical_description" -> "core/text-transform70#"
+"expression:value.trim()" -> "core/text-transform70#"
+table90 -> "core/text-transform70#"
+"core/mass-edit20#" -> table92
+"col-name:physical_description" -> "core/mass-edit20#"
+table91 -> "core/mass-edit20#"
+"core/mass-edit21#" -> table93
+"col-name:physical_description" -> "core/mass-edit21#"
+table92 -> "core/mass-edit21#"
+"core/mass-edit22#" -> table94
+"col-name:physical_description" -> "core/mass-edit22#"
+table93 -> "core/mass-edit22#"
+"core/text-transform71#" -> table95
+"col-name:occasion" -> "core/text-transform71#"
+"expression:value.trim()" -> "core/text-transform71#"
+table94 -> "core/text-transform71#"
+"core/text-transform72#" -> table96
+"col-name:occasion" -> "core/text-transform72#"
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform72#"
+table95 -> "core/text-transform72#"
+"core/mass-edit23#" -> table97
+"col-name:occasion" -> "core/mass-edit23#"
+table96 -> "core/mass-edit23#"
+"core/mass-edit24#" -> table98
+"col-name:occasion" -> "core/mass-edit24#"
+table97 -> "core/mass-edit24#"
+"core/mass-edit25#" -> table99
+"col-name:occasion" -> "core/mass-edit25#"
+table98 -> "core/mass-edit25#"
+"core/mass-edit26#" -> table100
+"col-name:occasion" -> "core/mass-edit26#"
+table99 -> "core/mass-edit26#"
+"core/text-transform73#" -> table101
+"col-name:occasion" -> "core/text-transform73#"
+"expression:grel:value.replace(\"[\",\"\")" -> "core/text-transform73#"
+table100 -> "core/text-transform73#"
+"core/text-transform74#" -> table102
+"col-name:occasion" -> "core/text-transform74#"
+"expression:grel:value.replace(\"]\",\"\")" -> "core/text-transform74#"
+table101 -> "core/text-transform74#"
+"core/text-transform75#" -> table103
+"col-name:occasion" -> "core/text-transform75#"
+"expression:grel:value.replace(\"{\",\"\")" -> "core/text-transform75#"
+table102 -> "core/text-transform75#"
+"core/text-transform76#" -> table104
+"col-name:occasion" -> "core/text-transform76#"
+"expression:grel:value.replace(\"}\",\"\")" -> "core/text-transform76#"
+table103 -> "core/text-transform76#"
+"core/text-transform77#" -> table105
+"col-name:occasion" -> "core/text-transform77#"
+"expression:grel:value.replace(\"\\(\",\"\")" -> "core/text-transform77#"
+table104 -> "core/text-transform77#"
+"core/text-transform78#" -> table106
+"col-name:occasion" -> "core/text-transform78#"
+"expression:grel:value.replace(\"\\)\",\"\")" -> "core/text-transform78#"
+table105 -> "core/text-transform78#"
+"core/text-transform79#" -> table107
+"col-name:occasion" -> "core/text-transform79#"
+"expression:grel:value.replace(\"\\\\\",\"\")" -> "core/text-transform79#"
+table106 -> "core/text-transform79#"
+"core/text-transform80#" -> table108
+"col-name:occasion" -> "core/text-transform80#"
+"expression:grel:value.replace(\"\\\"\",\"\")" -> "core/text-transform80#"
+table107 -> "core/text-transform80#"
+"core/text-transform81#" -> table109
+"col-name:occasion" -> "core/text-transform81#"
+"expression:grel:value.replace(\";\",\"\")" -> "core/text-transform81#"
+table108 -> "core/text-transform81#"
+"core/mass-edit27#" -> table110
+"col-name:occasion" -> "core/mass-edit27#"
+table109 -> "core/mass-edit27#"
+"core/mass-edit28#" -> table111
+"col-name:occasion" -> "core/mass-edit28#"
+table110 -> "core/mass-edit28#"
+"core/mass-edit29#" -> table112
+"col-name:occasion" -> "core/mass-edit29#"
+table111 -> "core/mass-edit29#"
+"core/mass-edit30#" -> table113
+"col-name:occasion" -> "core/mass-edit30#"
+table112 -> "core/mass-edit30#"
+"core/mass-edit31#" -> table114
+"col-name:occasion" -> "core/mass-edit31#"
+table113 -> "core/mass-edit31#"
+"core/text-transform82#" -> table115
+"col-name:occasion" -> "core/text-transform82#"
+"expression:grel:value.replace(\"OTHER_\",_\"\")" -> "core/text-transform82#"
+table114 -> "core/text-transform82#"
+"core/text-transform83#" -> table116
+"col-name:occasion" -> "core/text-transform83#"
+"expression:grel:value.replace(\"OTHER,\"_\"\")" -> "core/text-transform83#"
+table115 -> "core/text-transform83#"
+"core/text-transform84#" -> table117
+"col-name:occasion" -> "core/text-transform84#"
+"expression:grel:value.replace(\"OTHER,\",_\"\")" -> "core/text-transform84#"
+table116 -> "core/text-transform84#"
+"core/mass-edit32#" -> table118
+"col-name:occasion" -> "core/mass-edit32#"
+table117 -> "core/mass-edit32#"
+"core/mass-edit33#" -> table119
+"col-name:occasion" -> "core/mass-edit33#"
+table118 -> "core/mass-edit33#"
+"core/text-transform85#" -> table120
+"col-name:occasion" -> "core/text-transform85#"
+"expression:value.trim()" -> "core/text-transform85#"
+table119 -> "core/text-transform85#"
+"core/text-transform86#" -> table121
+"col-name:occasion" -> "core/text-transform86#"
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform86#"
+table120 -> "core/text-transform86#"
+"core/mass-edit34#" -> table122
+"col-name:occasion" -> "core/mass-edit34#"
+table121 -> "core/mass-edit34#"
+"core/mass-edit35#" -> table123
+"col-name:occasion" -> "core/mass-edit35#"
+table122 -> "core/mass-edit35#"
+"core/mass-edit36#" -> table124
+"col-name:occasion" -> "core/mass-edit36#"
+table123 -> "core/mass-edit36#"
+"core/mass-edit37#" -> table125
+"col-name:occasion" -> "core/mass-edit37#"
+table124 -> "core/mass-edit37#"
+"core/mass-edit38#" -> table126
+"col-name:occasion" -> "core/mass-edit38#"
+table125 -> "core/mass-edit38#"
+"core/text-transform87#" -> table127
+"col-name:occasion" -> "core/text-transform87#"
+"expression:value.toTitlecase()" -> "core/text-transform87#"
+table126 -> "core/text-transform87#"
+"core/text-transform88#" -> table128
+"col-name:notes" -> "core/text-transform88#"
+"expression:value.trim()" -> "core/text-transform88#"
+table127 -> "core/text-transform88#"
+"core/text-transform89#" -> table129
+"col-name:notes" -> "core/text-transform89#"
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform89#"
+table128 -> "core/text-transform89#"
+"core/mass-edit39#" -> table130
+"col-name:notes" -> "core/mass-edit39#"
+table129 -> "core/mass-edit39#"
+"core/mass-edit40#" -> table131
+"col-name:notes" -> "core/mass-edit40#"
+table130 -> "core/mass-edit40#"
+"core/mass-edit41#" -> table132
+"col-name:notes" -> "core/mass-edit41#"
+table131 -> "core/mass-edit41#"
+"core/text-transform90#" -> table133
+"col-name:notes" -> "core/text-transform90#"
+"expression:grel:value.replace(\"\\\"\",\"\")" -> "core/text-transform90#"
+table132 -> "core/text-transform90#"
+"core/text-transform91#" -> table134
+"col-name:notes" -> "core/text-transform91#"
+"expression:grel:value.replace(\"[\",\"\")" -> "core/text-transform91#"
+table133 -> "core/text-transform91#"
+"core/text-transform92#" -> table135
+"col-name:notes" -> "core/text-transform92#"
+"expression:grel:value.replace(\"]\",\"\")" -> "core/text-transform92#"
+table134 -> "core/text-transform92#"
+"core/text-transform93#" -> table136
+"col-name:notes" -> "core/text-transform93#"
+"expression:grel:value.replace(\"\\(\",\"\")" -> "core/text-transform93#"
+table135 -> "core/text-transform93#"
+"core/text-transform94#" -> table137
+"col-name:notes" -> "core/text-transform94#"
+"expression:grel:value.replace(\"\\)\",\"\")" -> "core/text-transform94#"
+table136 -> "core/text-transform94#"
+"core/text-transform95#" -> table138
+"col-name:notes" -> "core/text-transform95#"
+"expression:grel:value.replace(\"\\\\\",\"\")" -> "core/text-transform95#"
+table137 -> "core/text-transform95#"
+"core/text-transform96#" -> table139
+"col-name:notes" -> "core/text-transform96#"
+"expression:value.toUppercase()" -> "core/text-transform96#"
+table138 -> "core/text-transform96#"
+"core/text-transform97#" -> table140
+"col-name:date" -> "core/text-transform97#"
+"expression:value.trim()" -> "core/text-transform97#"
+table139 -> "core/text-transform97#"
+"core/text-transform98#" -> table141
+"col-name:date" -> "core/text-transform98#"
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform98#"
+table140 -> "core/text-transform98#"
+"core/text-transform99#" -> table142
+"col-name:date" -> "core/text-transform99#"
+"expression:value.toDate()" -> "core/text-transform99#"
+table141 -> "core/text-transform99#"
+"core/text-transform100#" -> table143
+"col-name:sponsor" -> "core/text-transform100#"
+"expression:value.trim()" -> "core/text-transform100#"
+table142 -> "core/text-transform100#"
+"core/text-transform101#" -> table144
+"col-name:sponsor" -> "core/text-transform101#"
+"expression:grel:value.replace(/^\\'/,_\"\")" -> "core/text-transform101#"
+table143 -> "core/text-transform101#"
+"core/text-transform102#" -> table145
+"col-name:event" -> "core/text-transform102#"
+"expression:grel:value.replace(/^\\'/,_\"\")" -> "core/text-transform102#"
+table144 -> "core/text-transform102#"
+"core/text-transform103#" -> table146
+"col-name:sponsor" -> "core/text-transform103#"
+"expression:value.toTitlecase()" -> "core/text-transform103#"
+table145 -> "core/text-transform103#"
+"core/text-transform104#" -> table147
+"col-name:venue" -> "core/text-transform104#"
+"expression:grel:value.replace(\"Other_\",_\"\")" -> "core/text-transform104#"
+table146 -> "core/text-transform104#"
+"core/mass-edit42#" -> table148
+"col-name:venue" -> "core/mass-edit42#"
+table147 -> "core/mass-edit42#"
+"core/mass-edit43#" -> table149
+"col-name:venue" -> "core/mass-edit43#"
+table148 -> "core/mass-edit43#"
+"core/mass-edit44#" -> table150
+"col-name:venue" -> "core/mass-edit44#"
+table149 -> "core/mass-edit44#"
+"core/text-transform105#" -> table151
+"col-name:place" -> "core/text-transform105#"
+"expression:grel:value.replace(/^\\'/,_\"\")" -> "core/text-transform105#"
+table150 -> "core/text-transform105#"
+"core/mass-edit45#" -> table152
+"col-name:physical_description" -> "core/mass-edit45#"
+table151 -> "core/mass-edit45#"
+"core/text-transform106#" -> table153
+"col-name:location" -> "core/text-transform106#"
+"expression:value.trim()" -> "core/text-transform106#"
+table152 -> "core/text-transform106#"
+"core/text-transform107#" -> table154
+"col-name:location" -> "core/text-transform107#"
+"expression:value.replace(/\\s+/,'_')" -> "core/text-transform107#"
+table153 -> "core/text-transform107#"
+"core/mass-edit46#" -> table155
+"col-name:location" -> "core/mass-edit46#"
+table154 -> "core/mass-edit46#"
+"core/mass-edit47#" -> table156
+"col-name:location" -> "core/mass-edit47#"
+table155 -> "core/mass-edit47#"
+"core/mass-edit48#" -> table157
+"col-name:location" -> "core/mass-edit48#"
+table156 -> "core/mass-edit48#"
+"core/text-transform108#" -> table158
+"col-name:location" -> "core/text-transform108#"
+"expression:grel:value.replace(\"[\",\"\")" -> "core/text-transform108#"
+table157 -> "core/text-transform108#"
+"core/text-transform109#" -> table159
+"col-name:location" -> "core/text-transform109#"
+"expression:grel:value.replace(\"]\",\"\")" -> "core/text-transform109#"
+table158 -> "core/text-transform109#"
+"core/text-transform110#" -> table160
+"col-name:location" -> "core/text-transform110#"
+"expression:grel:value.replace(\"{\",\"\")" -> "core/text-transform110#"
+table159 -> "core/text-transform110#"
+"core/text-transform111#" -> table161
+"col-name:location" -> "core/text-transform111#"
+"expression:grel:value.replace(\"}\",\"\")" -> "core/text-transform111#"
+table160 -> "core/text-transform111#"
+"core/text-transform112#" -> table162
+"col-name:location" -> "core/text-transform112#"
+"expression:grel:value.replace(\"\\(\",\"\")" -> "core/text-transform112#"
+table161 -> "core/text-transform112#"
+"core/text-transform113#" -> table163
+"col-name:location" -> "core/text-transform113#"
+"expression:grel:value.replace(\"\\)\",\"\")" -> "core/text-transform113#"
+table162 -> "core/text-transform113#"
+"core/text-transform114#" -> table164
+"col-name:location" -> "core/text-transform114#"
+"expression:grel:value.replace(\"\\\\\",\"\")" -> "core/text-transform114#"
+table163 -> "core/text-transform114#"
+"core/text-transform115#" -> table165
+"col-name:location" -> "core/text-transform115#"
+"expression:grel:value.replace(\"\\\"\",\"\")" -> "core/text-transform115#"
+table164 -> "core/text-transform115#"
+"core/text-transform116#" -> table166
+"col-name:location" -> "core/text-transform116#"
+"expression:grel:value.replace(\";\",\"\")" -> "core/text-transform116#"
+table165 -> "core/text-transform116#"
+"core/text-transform117#" -> table167
+"col-name:location" -> "core/text-transform117#"
+"expression:grel:value.replace(/^\\'/,_\"\")" -> "core/text-transform117#"
+table166 -> "core/text-transform117#"
+"core/text-transform118#" -> table168
+"col-name:location" -> "core/text-transform118#"
+"expression:value.toTitlecase()" -> "core/text-transform118#"
+table167 -> "core/text-transform118#"
+"core/mass-edit49#" -> table169
+"col-name:venue" -> "core/mass-edit49#"
+table168 -> "core/mass-edit49#"
+"core/mass-edit50#" -> table170
+"col-name:venue" -> "core/mass-edit50#"
+table169 -> "core/mass-edit50#"
+"core/mass-edit51#" -> table171
+"col-name:venue" -> "core/mass-edit51#"
+table170 -> "core/mass-edit51#"
+"core/mass-edit52#" -> table172
+"col-name:venue" -> "core/mass-edit52#"
+table171 -> "core/mass-edit52#"
+"core/mass-edit53#" -> table173
+"col-name:venue" -> "core/mass-edit53#"
+table172 -> "core/mass-edit53#"
+"core/mass-edit54#" -> table174
+"col-name:venue" -> "core/mass-edit54#"
+table173 -> "core/mass-edit54#"
+"core/mass-edit55#" -> table175
+"col-name:venue" -> "core/mass-edit55#"
+table174 -> "core/mass-edit55#"
+"core/mass-edit56#" -> table176
+"col-name:venue" -> "core/mass-edit56#"
+table175 -> "core/mass-edit56#"
+"core/mass-edit57#" -> table177
+"col-name:venue" -> "core/mass-edit57#"
+table176 -> "core/mass-edit57#"
+"core/mass-edit58#" -> table178
+"col-name:venue" -> "core/mass-edit58#"
+table177 -> "core/mass-edit58#"
+"core/mass-edit59#" -> table179
+"col-name:venue" -> "core/mass-edit59#"
+table178 -> "core/mass-edit59#"
+"core/mass-edit60#" -> table180
+"col-name:venue" -> "core/mass-edit60#"
+table179 -> "core/mass-edit60#"
+"core/column-removal0#" -> table181
+"col-name:keywords" -> "core/column-removal0#"
+table180 -> "core/column-removal0#"
+"core/column-removal1#" -> table182
+"col-name:language" -> "core/column-removal1#"
+table181 -> "core/column-removal1#"
+"core/column-removal2#" -> table183
+"col-name:location_type" -> "core/column-removal2#"
+table182 -> "core/column-removal2#"
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* End of top-level graph */
+}
