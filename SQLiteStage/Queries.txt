@@ -2,7 +2,8 @@
 IC:
 For each menu, there should be one unique menu id.
 
-Query: SELECT COUNT(DISTINCT(menuid)) FROM menu
+Query: 
+SELECT COUNT(DISTINCT(menuid)) FROM menu
 
 Result Example:
 COUNT(DISTINCT (menuid))
